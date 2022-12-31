@@ -20,6 +20,10 @@ jobs:
       - name: Set ENV var
         run: |
           echo "CUSTOM_VAR=IT WORKS" >> $GITHUB_ENV
+          echo "CUSTOM_VAR_MULTY<<EOF" >> $GITHUB_ENV
+          echo "Multiline Var: line1" >> $GITHUB_ENV
+          echo "Multiline Var: line2" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
 
       - name: Use ENV var via `env` block
         run: |
@@ -39,6 +43,7 @@ jobs:
       - name: Use ENV var via `env` block in external action
         uses: 'easingthemes/simple-github-action@main'
         env:
-          USE_CUSTOM_VAR: ${{ env.CUSTOM_VAR }} # NOT OK, prints ''
+          USE_CUSTOM_VAR: ${{ env.CUSTOM_VAR }} #
           USE_CUSTOM_VAR_2: $CUSTOM_VAR # NOT OK, prints '$CUSTOM_VAR'
-          USE_CUSTOM_VAR_3: $GLOBAL_WORKFLOW_ENV # OK
+          USE_CUSTOM_VAR_3: $GLOBAL_WORKFLOW_ENV #
+          USE_CUSTOM_VAR_MULTY: ${{ env.CUSTOM_VAR_MULTY }}
