@@ -1,8 +1,8 @@
 // START ................................................
 console.log('CUSTOM_VAR: ', process.env.CUSTOM_VAR);
-console.log('CUSTOM_VAR_1: ', process.env.CUSTOM_VAR_1);
-console.log('CUSTOM_VAR_2: ', process.env.CUSTOM_VAR_2);
-console.log('CUSTOM_VAR_3: ', process.env.CUSTOM_VAR_3);
+console.log('USE_CUSTOM_VAR: ', process.env.USE_CUSTOM_VAR);
+console.log('USE_CUSTOM_VAR_2: ', process.env.USE_CUSTOM_VAR_2);
+console.log('USE_CUSTOM_VAR_3: ', process.env.USE_CUSTOM_VAR_3);
 // ................................................
 console.log('process.env: ', JSON.stringify(process.env, null, 4));
 // END ALL ................................................
