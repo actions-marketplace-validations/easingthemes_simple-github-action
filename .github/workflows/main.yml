@@ -37,7 +37,7 @@ jobs:
           USE_CUSTOM_VAR_3: $GLOBAL_WORKFLOW_ENV
 
       - name: Use ENV var via `env` block in external action
-        uses: 'some/nodejs/action@main'
+        uses: 'easingthemes/simple-github-action@main'
         env:
           USE_CUSTOM_VAR: ${{ env.CUSTOM_VAR }} # NOT OK, prints ''
           USE_CUSTOM_VAR_2: $CUSTOM_VAR # NOT OK, prints '$CUSTOM_VAR'
