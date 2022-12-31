@@ -1,0 +1,23 @@
+name: "simple Github action"
+description: "Log ENV vars from the workflow"
+author: "easingthemes"
+inputs:
+  CUSTOM_VAR:
+    description: "Custom var"
+    required: true
+  CUSTOM_VAR_2:
+    description: "Custom var 2"
+    required: false
+  CUSTOM_VAR_3:
+    description: "Custom var 3"
+    required: false
+    default: "Custom var 3 default"
+outputs:
+  status:
+    description: "Status"
+runs:
+  using: "node16"
+  main: "src/index.js"
+branding:
+  color: "green"
+  icon: "truck"
